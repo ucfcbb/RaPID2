@@ -17,8 +17,35 @@ This project is the successor to the original [RaPID v1](https://github.com/ZhiG
 
 RaPID v2 is part of an academic research project. While it has been extensively tested and delivers strong performance in practice, users should be aware that the software may contain bugs or incomplete features. Feedback and contributions are welcome.
 
-## Compilation & Usage
+## Compilation and Execution (C#)
 
-Instructions for building and running RaPID v2 will be provided soon.  
-**→ _[Placeholder for compilation and execution guide]_**
+### Install .NET SDK
+
+You will need the .NET 8.0 SDK to build and run RaPID v2.
+
+- **Windows**:  
+  Follow the installation instructions at the official .NET site:  
+  https://learn.microsoft.com/en-us/dotnet/core/install/windows
+
+- **Linux (Ubuntu example)**:  
+  ```bash
+  sudo apt-get update
+  sudo apt-get install -y dotnet-sdk-8.0
+
+
+For additional details, refer to the official guide:
+https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet9&pivots=os-linux-ubuntu-2410
+
+## Build
+Create a working directory (e.g., RaPID2).
+
+Download all files from the desired source folder (HPC/ or Stable/) into this directory.
+
+Open a terminal in the directory and run:
+ ```bash
+  dotnet build --configuration Release
+
+## Run
+After building, the compiled executable will be located at:
+
 
