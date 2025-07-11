@@ -57,6 +57,39 @@ After building, the compiled executable will be located at:
 ```
 **Note:** The folder name (e.g., `net8.0`) and the executable file name may vary depending on the installed .NET version and whether you are using the HPC or Stable mode of RaPID2.
 
+## Command-Line Parameters
+
+RaPID v2 requires the following positional arguments:
+
+| **Parameter** | **Type**       | **Description** |
+|---------------|----------------|-----------------|
+| `VCF Path`             | `string`        | Path to the input VCF file containing phased genotypes. |
+| `Genetic Map Path`     | `string`        | Path to the PLINK-formatted genetic map file. |
+| `IBD Length Threshold` | `decimal`       | Minimum IBD segment length to report (in centiMorgans, cM). |
+| `IBD Output Path`      | `string`        | Path to save the output `.ibd` file. |
+| `Number of Writers`    | `int`           | Number of parallel file writers to use during output. |
+| `Projection Method`    | `char`          | Method for random projection: `'F'` = fixed window, `'D'` = dynamic window. |
+| `Window Size`          | `int or decimal`| Window size for the projection method. Use an integer for fixed windows; use a decimal (cM) for dynamic windows. |
+| `First Partition`      | `int`           | Index of the first partition to process (inclusive). |
+| `Last Partition`       | `int`           | Index of the last partition to process (inclusive). |
+| `Total Partitions`     | `int`           | Total number of partitions into which the input is divided. |
+
+### Example
+
+```bash
+RaPID_v2 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 7 8
+```
+This runs RaPID v2 using:
+
+a 3.0 cM threshold,
+
+4 output writers,
+
+fixed-window projection (F) with window size 3,
+
+partition range 0 to 7 (inclusive),
+
+across a total of 8 partitions.
 
 
 
