@@ -104,7 +104,7 @@ RaPID v2 requires the following positional arguments:
 | `IBD Output Path`      | `string`        | Path to save the output `.ibd` file. |
 | `Number of Writers`    | `int`           | Number of parallel file writers to use during output. |
 | `Projection Method`    | `char`          | Method for random projection: `'F'` = fixed window, `'D'` = dynamic window. |
-| `Window Size`          | `int or decimal`| Window size for the projection method. Use an integer for fixed windows; use a decimal (cM) for dynamic windows. |
+| `Window Size`          | `int` or `decimal`| Window size for the projection method. Use an integer for fixed windows; use a decimal (cM) for dynamic windows. |
 | `First Partition`      | `int`           | Index of the first partition to process (inclusive). |
 | `Last Partition`       | `int`           | Index of the last partition to process (inclusive). |
 | `Total Partitions`     | `int`           | Total number of partitions into which the input is divided. |
