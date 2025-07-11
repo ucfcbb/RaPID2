@@ -26,31 +26,31 @@ RaPID2 is part of an academic research project. While it has been extensively te
   
   RaPID v2 uses modular partitioning based on the formula:
 
-```csharp
-KeyA % totalPartition == currentPartition
-```
-If a specific partition fails (e.g., partition p out of N), you can re-run it using a finer partitioning with a new total M, where M is a multiple of N (e.g., 2N, 4N, etc).
-To recover partition p of N using M partitions:
-```bash
-Partitions to run =
-{ p + k × N } for k = 0 to (M / N) – 1
-```
-Examples
-Recovering partition 0 of 10 using 20 partitions:
-
-  Step = 20 / 10 = 2
+  ```csharp
+  KeyA % totalPartition == currentPartition
+  ```
+  If a specific partition fails (e.g., partition p out of N), you can re-run it using a finer partitioning with a new total M, where M is a multiple of N (e.g., 2N, 4N, etc).
+  To recover partition p of N using M partitions:
+  ```bash
+  Partitions to run =
+  { p + k × N } for k = 0 to (M / N) – 1
+  ```
+  Examples
+  Recovering partition 0 of 10 using 20 partitions:
   
-  Run: 0 and 10
-
-Recovering partition 1 of 10 using 20 partitions:
-
-  Run: 1 and 11
-
-Recovering partition 3 of 8 using 32 partitions:
-
-  Step = 32 / 8 = 4
-
-  Run: 3, 11, 19, 27
+    Step = 20 / 10 = 2
+    
+    Run: 0 and 10
+  
+  Recovering partition 1 of 10 using 20 partitions:
+  
+    Run: 1 and 11
+  
+  Recovering partition 3 of 8 using 32 partitions:
+  
+    Step = 32 / 8 = 4
+  
+    Run: 3, 11, 19, 27
 
 ## Compilation and Execution (C#)
 
