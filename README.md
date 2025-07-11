@@ -8,6 +8,7 @@ This project is the successor to the original [RaPID v1](https://github.com/ZhiG
 
 - **HPC Mode**  
   Optimized for high-performance computing clusters. This mode uses advanced memory-aware parallelization strategies and is ideal for large datasets and benchmarking scenarios.
+  
  ⚠️ **Note:** HPC mode assumes access to a large machine with substantial memory (on the order of terabytes). On smaller machines, it may not perform well or could run out of memory and crash.
 - **Stable Mode**  
   A lightweight, resource-efficient version suitable for general-purpose analysis or production environments with limited computational resources.
