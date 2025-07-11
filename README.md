@@ -16,7 +16,6 @@ RaPID2 is part of an academic research project. While it has been extensively te
 
 ## Partitioning Strategy
 
-- **Partition-Based Execution**  
   Both HPC and Stable modes use a partitioning approach to manage memory and workload. Increasing the number of partitions will reduce peak memory usage but may increase total runtime due to overhead.
 
 - **Distributed Execution**  
