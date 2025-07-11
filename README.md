@@ -1,10 +1,8 @@
-# RaPID v2
+# RaPID2
 
-# RaPID v2
+**RaPID2** is a high-performance IBD detection tool based on the **Positional Burrows-Wheeler Transform (PBWT)**. It is designed to efficiently detect shared genomic segments in large-scale datasets and supports both high-throughput computing and stable deployment environments.
 
-**RaPID v2** is a high-performance IBD detection tool based on the **Positional Burrows-Wheeler Transform (PBWT)**. It is designed to efficiently detect shared genomic segments in large-scale datasets and supports both high-throughput computing and stable deployment environments.
-
-This work builds on the original [RaPID v1](https://github.com/ZhiGroup/RaPID) [[1]] and uses the [HP-PBWT engine](https://github.com/ucfcbb/HP-PBWT) at its core [[2]]. RaPID v2 retains the core algorithmic strengths of its predecessor while significantly improving performance, flexibility, and scalability.
+This work builds on the original [RaPID v1](https://github.com/ZhiGroup/RaPID) [[1]] and uses the [HP-PBWT engine](https://github.com/ucfcbb/HP-PBWT) at its core [[2]]. RaPID2 retains the core algorithmic strengths of its predecessor while significantly improving performance, flexibility, and scalability.
 
 
 ## Modes of Operation
@@ -18,13 +16,13 @@ This work builds on the original [RaPID v1](https://github.com/ZhiGroup/RaPID) [
 
 ## About This Project
 
-RaPID v2 is part of an academic research project. While it has been extensively tested and delivers strong performance in practice, users should be aware that the software may contain bugs or incomplete features. Feedback and contributions are welcome.
+RaPID2 is part of an academic research project. While it has been extensively tested and delivers strong performance in practice, users should be aware that the software may contain bugs or incomplete features. Feedback and contributions are welcome.
 
 ## Compilation and Execution (C#)
 
 ### Install .NET SDK
 
-You will need the .NET 8.0 SDK to build and run RaPID v2.
+You will need the .NET 8.0 SDK to build and run RaPID2.
 
 - **Windows**:  
   Follow the installation instructions at the official .NET site:  
