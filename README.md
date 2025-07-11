@@ -109,4 +109,8 @@ across a total of 8 partitions.
 
 [2] HP-PBWT: Tang, Kecong, et al. "Haplotype-based Parallel PBWT for Biobank Scale Data." bioRxiv (2025): 2025-02.
 
+## Citation
+
+If you use RaPID v2 in your research, we would appreciate a citation.  
+The associated paper is currently in preparation and the link will be provided here once available.
 
