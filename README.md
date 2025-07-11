@@ -77,7 +77,7 @@ RaPID v2 requires the following positional arguments:
 ### Example
 
 ```bash
-RaPID_v2 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 7 8
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 7 8
 ```
 This runs RaPID v2 using:
 
