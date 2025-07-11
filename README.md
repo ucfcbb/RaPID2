@@ -23,6 +23,7 @@ RaPID2 is part of an academic research project. While it has been extensively te
 
 - **Fail-Safe and Recovery**  
   If a specific partition fails (e.g., partition 0 of 10), you can recover by subdividing it further.
+  
   RaPID v2 uses modular partitioning based on the formula:
 
 ```csharp
