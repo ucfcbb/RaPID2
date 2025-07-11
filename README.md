@@ -50,8 +50,7 @@ Open a terminal in the directory and run:
 ```bash
   dotnet build --configuration Release
 ```
-For additional details, refer to the official guide:
-https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet9&pivots=os-linux-ubuntu-2410
+
 
 ## Run
 After building, the compiled executable will be located at:
