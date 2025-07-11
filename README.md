@@ -36,6 +36,7 @@ RaPID2 is part of an academic research project. While it has been extensively te
   { p + k × N } for k = 0 to (M / N) – 1
   ```
   Examples
+  
   Recovering partition 0 of 10 using 20 partitions:
   
     Step = 20 / 10 = 2
