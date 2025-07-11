@@ -15,7 +15,7 @@ This project is the successor to the original [RaPID v1](https://github.com/ZhiG
 
 ## About This Project
 
-RaPID v2 is part of an academic research project. While it has been extensively tested and delivers strong performance in practice, users should be aware that the software is still under active development and may contain bugs or incomplete features. Feedback and contributions are welcome.
+RaPID v2 is part of an academic research project. While it has been extensively tested and delivers strong performance in practice, users should be aware that the software may contain bugs or incomplete features. Feedback and contributions are welcome.
 
 ## Compilation & Usage
 
