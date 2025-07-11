@@ -91,6 +91,16 @@ partition range 0 to 7 (inclusive),
 
 across a total of 8 partitions.
 
+## Partitioning Strategy
+
+- **Partition-Based Execution**  
+  Both HPC and Stable modes use a partitioning approach to manage memory and workload. Increasing the number of partitions will reduce peak memory usage but may increase total runtime due to overhead.
+
+- **Distributed Execution**  
+  RaPID2 can be run in a distributed fashion by assigning different partition ranges to different machines. For example, one node can run partitions 0–3 while another runs 4–7.
+
+- **Fail-Safe and Recovery**  
+  If a specific partition fails (e.g., partition 0 of 10), you can recover by subdividing it further. For example, re-run with 20 total partitions and execute just partition 0 and 1 — these correspond to the original partition 0, now split in two.
 
 
 ## References
