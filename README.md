@@ -1,8 +1,11 @@
 # RaPID v2
 
+# RaPID v2
+
 **RaPID v2** is a high-performance IBD detection tool based on the **Positional Burrows-Wheeler Transform (PBWT)**. It is designed to efficiently detect shared genomic segments in large-scale datasets and supports both high-throughput computing and stable deployment environments.
 
-This project is the successor to the original [RaPID v1](https://github.com/ZhiGroup/RaPID), retaining its core algorithmic strengths while significantly improving performance, flexibility, and scalability.
+This work builds on the original [RaPID v1](https://github.com/ZhiGroup/RaPID) [[1]] and uses the [HP-PBWT engine](https://github.com/ucfcbb/HP-PBWT) at its core [[2]]. RaPID v2 retains the core algorithmic strengths of its predecessor while significantly improving performance, flexibility, and scalability.
+
 
 ## Modes of Operation
 
@@ -56,5 +59,13 @@ After building, the compiled executable will be located at:
 ./bin/Release/net8.0/RaPIDv2_HPC-1.0
 ```
 **Note:** The folder name (e.g., `net8.0`) and the executable file name may vary depending on the installed .NET version and whether you are using the HPC or Stable mode of RaPID2.
+
+
+
+
+## References
+
+[1] RaPID: Naseri, Ardalan, et al. "RaPID: ultra-fast, powerful, and accurate detection of segments identical by descent (IBD) in biobank-scale cohorts." Genome biology 20 (2019): 1-15. 
+[2] HP-PBWT: Tang, Kecong, et al. "Haplotype-based Parallel PBWT for Biobank Scale Data." bioRxiv (2025): 2025-02.
 
 
