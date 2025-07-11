@@ -1,7 +1,10 @@
 # RaPID2
+## About This Project
 
+RaPID2 is part of an academic research project. While it has been extensively tested and delivers strong performance in practice, users should be aware that the software may contain bugs or incomplete features. Feedback and contributions are welcome.
 **RaPID2** is a high-performance IBD detection tool based on the **Positional Burrows-Wheeler Transform (PBWT)**. It is designed to efficiently detect shared genomic segments in large-scale datasets and supports both high-throughput computing and stable deployment environments.
 
+## Introduction
 This work builds on the original [RaPID](https://github.com/ZhiGroup/RaPID)[1] and uses the [HP-PBWT engine](https://github.com/ucfcbb/HP-PBWT)[2] at its core . RaPID2 retains the core algorithmic strengths of its predecessor while significantly improving performance, flexibility, and scalability.
 
 
@@ -14,9 +17,16 @@ This work builds on the original [RaPID](https://github.com/ZhiGroup/RaPID)[1] a
 - **Stable Mode**  
   A lightweight, resource-efficient version suitable for general-purpose analysis or production environments with limited computational resources.
 
-## About This Project
+## Partitioning Strategy
 
-RaPID2 is part of an academic research project. While it has been extensively tested and delivers strong performance in practice, users should be aware that the software may contain bugs or incomplete features. Feedback and contributions are welcome.
+- **Partition-Based Execution**  
+  Both HPC and Stable modes use a partitioning approach to manage memory and workload. Increasing the number of partitions will reduce peak memory usage but may increase total runtime due to overhead.
+
+- **Distributed Execution**  
+  RaPID2 can be run in a distributed fashion by assigning different partition ranges to different machines. For example, one node can run partitions 0–3 while another runs 4–7.
+
+- **Fail-Safe and Recovery**  
+  If a specific partition fails (e.g., partition 0 of 10), you can recover by subdividing it further. For example, re-run with 20 total partitions and execute just partition 0 and 1 — these correspond to the original partition 0, now split in two.
 
 ## Compilation and Execution (C#)
 
@@ -91,16 +101,7 @@ partition range 0 to 7 (inclusive),
 
 across a total of 8 partitions.
 
-## Partitioning Strategy
 
-- **Partition-Based Execution**  
-  Both HPC and Stable modes use a partitioning approach to manage memory and workload. Increasing the number of partitions will reduce peak memory usage but may increase total runtime due to overhead.
-
-- **Distributed Execution**  
-  RaPID2 can be run in a distributed fashion by assigning different partition ranges to different machines. For example, one node can run partitions 0–3 while another runs 4–7.
-
-- **Fail-Safe and Recovery**  
-  If a specific partition fails (e.g., partition 0 of 10), you can recover by subdividing it further. For example, re-run with 20 total partitions and execute just partition 0 and 1 — these correspond to the original partition 0, now split in two.
 
 
 ## References
