@@ -36,16 +36,25 @@ You will need the .NET 8.0 SDK to build and run RaPID v2.
 For additional details, refer to the official guide:
 https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet9&pivots=os-linux-ubuntu-2410
 
+
+
 ## Build
 Create a working directory (e.g., RaPID2).
 
 Download all files from the desired source folder (HPC/ or Stable/) into this directory.
 
 Open a terminal in the directory and run:
- ```bash
+```bash
   dotnet build --configuration Release
+```
+For additional details, refer to the official guide:
+https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet9&pivots=os-linux-ubuntu-2410
 
 ## Run
 After building, the compiled executable will be located at:
+```bash
+./bin/Release/net8.0/RaPIDv2_HPC-1.0
+```
+**Note:** The folder name (e.g., `net8.0`) and the executable file name may vary depending on the installed .NET version and whether you are using the HPC or Stable mode of RaPID2.
 
 
