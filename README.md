@@ -99,16 +99,16 @@ RaPID v2 requires the following positional arguments:
 
 | **Parameter** | **Type**       | **Description** |
 |---------------|----------------|-----------------|
-| `VCF Path`             | `string`        | Path to the input VCF file containing phased genotypes. |
-| `Genetic Map Path`     | `string`        | Path to the PLINK-formatted genetic map file. |
-| `IBD Length Threshold` | `decimal`       | Minimum IBD segment length to report (in centiMorgans, cM). |
-| `IBD Output Path`      | `string`        | Path to save the output `.ibd` file. |
-| `Number of Writers`    | `int`           | Number of parallel file writers to use during output. |
-| `Projection Method`    | `char`          | Method for random projection: `'F'` = fixed window, `'D'` = dynamic window. |
-| `Window Size`          | `int` or `decimal`| Window size for the projection method. Use an integer for fixed windows; use a decimal (cM) for dynamic windows. |
-| `First Partition`      | `int`           | Index of the first partition to process (inclusive). |
-| `Last Partition`       | `int`           | Index of the last partition to process (inclusive). |
-| `Total Partitions`     | `int`           | Total number of partitions into which the input is divided. |
+| VCF Path             | `string`        | Path to the input VCF file containing phased genotypes. |
+| Genetic Map Path     | `string`        | Path to the PLINK-formatted genetic map file. |
+| IBD Length Threshold | `decimal`       | Minimum IBD segment length to report (in centiMorgans, cM). |
+| IBD Output Path      | `string`        | Path to save the output `.ibd` file. |
+| Number of Writers    | `int`           | Number of parallel file writers to use during output. |
+| Projection Method    | `char`          | Method for random projection: `'F'` = fixed window, `'D'` = dynamic window. |
+| Window Size          | `int` or `decimal`| Window size for the projection method. Use an integer for fixed windows; use a decimal (cM) for dynamic windows. |
+| First Partition      | `int`           | Index of the first partition to process (inclusive). |
+| Last Partition       | `int`           | Index of the last partition to process (inclusive). |
+| Total Partitions     | `int`           | Total number of partitions into which the input is divided. |
 
 ### Example
 
