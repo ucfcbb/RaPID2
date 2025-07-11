@@ -67,8 +67,7 @@ You will need the .NET 8.0 SDK to build and run RaPID2.
   ```bash
   sudo apt-get update
   sudo apt-get install -y dotnet-sdk-8.0
-
-
+  ```
 For additional details, refer to the official guide:
 https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet9&pivots=os-linux-ubuntu-2410
 
