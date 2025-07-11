@@ -46,7 +46,7 @@ https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=
 
 
 
-## Build
+### Build
 Create a working directory (e.g., RaPID2).
 
 Download all files from the desired source folder (HPC/ or Stable/) into this directory.
@@ -57,14 +57,14 @@ Open a terminal in the directory and run:
 ```
 
 
-## Run
+### Run
 After building, the compiled executable will be located at:
 ```bash
 ./bin/Release/net8.0/RaPIDv2_HPC-1.0
 ```
 **Note:** The folder name (e.g., `net8.0`) and the executable file name may vary depending on the installed .NET version and whether you are using the HPC or Stable mode of RaPID2.
 
-## Command-Line Parameters
+### Command-Line Parameters
 
 RaPID v2 requires the following positional arguments:
 
