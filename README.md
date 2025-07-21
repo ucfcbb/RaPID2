@@ -1,5 +1,7 @@
 # RaPID2
 
+Contact Author: Kecong Tang (Kecong.Tang@ucf.edu or Benjamin.KT.vln@gmail.com)
+
 **RaPID2** is a high-performance IBD detection tool based on the **Positional Burrows-Wheeler Transform (PBWT)**. It is designed to efficiently detect shared genomic segments in large-scale datasets and supports both high-throughput computing and stable deployment environments. This work builds on the original [RaPID](https://github.com/ZhiGroup/RaPID)[1] and uses the [HP-PBWT engine](https://github.com/ucfcbb/HP-PBWT)[2] at its core. RaPID2 retains the core algorithmic strengths of its predecessor while significantly improving performance, flexibility, and scalability.
 
 The implementation is fully standalone and written in C#, with no external dependencies required. This makes it easy to compile, run, and deploy across environments without relying on third-party libraries or frameworks.
