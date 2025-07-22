@@ -88,7 +88,7 @@ Open a terminal in the directory and run:
 ```
 
 
-### Building on Windows with Visual Studio
+#### Building on Windows with Visual Studio
 
 If you are using a Windows machine with Visual Studio installed, you can build RaPID v2 for most operating system (Windows, Linux, or macOS) using the .NET SDK's cross-platform capabilities. Visual Studio supports multi-target builds and publishing for different platforms.
 
