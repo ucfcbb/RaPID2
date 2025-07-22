@@ -124,7 +124,7 @@ RaPID2 requires the following positional arguments:
 ### Example
 
 ```bash
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 7 8
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 7 8
 ```
 This runs RaPID v2 using:
 
@@ -155,7 +155,7 @@ Because of this variability, we strongly recommend a **safe test run** before pr
 2. Run **only the first partition** (`partition 0 of 100`) as a test:
 
 ```bash
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 0 100
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 0 100
 ```
 3. Monitor your machine's memory usage during this run.
 
@@ -173,11 +173,11 @@ Run one partition at a time, restarting RaPID2 for each partition. Example for 5
 
 Run partitions individually:
 ```bash
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 0 5
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 1 1 5
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 2 2 5
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 3 3 5
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 4 4 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 0 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 1 1 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 2 2 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 3 3 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 4 4 5
 ```
 This ensures clean memory state between partitions.
 
@@ -221,37 +221,37 @@ Each instance should be assigned a **different partition range** to avoid overla
 
 ```bash
 # Instance 1: partitions 0–4
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 4 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 4 15
 
 # Instance 2: partitions 5–9
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 5 9 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 5 9 15
 
 # Instance 3: partitions 10–14
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 10 14 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 10 14 15
 ```
 
 #### Example 2: 3 Parallel Batch Runs
 ```bash
 # Instance 1 (Batch Run for partitions 0–4):
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 0 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 1 1 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 2 2 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 3 3 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 4 4 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 0 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 1 1 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 2 2 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 3 3 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 4 4 15
 
 # Instance 2 (Batch Run for partitions 5–9):
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 5 5 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 6 6 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 7 7 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 8 8 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 9 9 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 5 5 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 6 6 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 7 7 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 8 8 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 9 9 15
 
 # Instance 3 (Batch Run for partitions 10–14):
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 10 10 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 11 11 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 12 12 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 13 13 15
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 14 14 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 10 10 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 11 11 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 12 12 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 13 13 15
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 14 14 15
 ```
 
 Choose continuous or batch mode based on your system’s memory behavior and operational preferences. Both methods can be parallelized across multiple RaPID2 instances.
