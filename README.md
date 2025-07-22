@@ -139,7 +139,9 @@ partition range 0 to 7 (inclusive),
 across a total of 8 partitions.
 
 
-## Memory Usage and Safe Test Run
+## Safe Test Run
+
+### Memory
 
 Memory requirements for RaPID v2 vary significantly depending on:
 - The IBD segment density of your dataset (which depends on the data panel).
@@ -163,7 +165,35 @@ RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 0 100
 
    If memory usage is high or your machine struggles: Increase the number of partitions for safer, more memory-efficient execution.
 
+### Batch Run vs. Continuous Run
 
+If your system does not release memory efficiently, or your environment has strict memory constraints, we recommend using a batch run approach:
+
+Run one partition at a time, restarting RaPID2 for each partition. Example for 5 partitions:
+
+Run partitions individually:
+```bash
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 0 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 1 1 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 2 2 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 3 3 5
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 4 4 5
+```
+This ensures clean memory state between partitions.
+
+If your machine releases memory efficiently or has sufficient memory, you can run multiple partitions in a single execution by setting a range in the partition parameters:
+Example to process partitions 0 through 4 (5 partitions total) in one go:
+
+The last three parameters control the partition:
+
+First Partition Index
+
+Last Partition Index
+
+Total Number of Partitions
+
+
+### CPU
 
 
 ## Citation
