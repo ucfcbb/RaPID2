@@ -193,8 +193,42 @@ Last Partition Index
 Total Number of Partitions
 
 
-### CPU
+### CPU Utilization and Parallel Instances
 
+Different datasets and machine architectures can lead to varying CPU utilization patterns when running RaPID v2. In some cases, especially on HPC environments, you may observe that RaPID2 uses only a fraction of your total CPU resources (e.g., 30–40%). This behavior can depend on data panel characteristics, memory bottlenecks, or OS-level scheduling.
+
+> ⚠️ **Minimum Recommended Cores:**  
+> RaPID2 is designed for parallel processing environments. We recommend a **minimum of 10 CPU cores** for effective performance. Systems with fewer cores may experience inefficient CPU usage and longer runtimes.
+
+To maximize throughput on larger systems, we recommend running **multiple RaPID2 instances in parallel**, each processing different partitions.
+
+### Strategy for Multi-Instance Parallel Execution
+
+- If RaPID2 is only using ~30% of your available CPU, consider running **3 parallel instances**, each working on different partition ranges.
+- This approach ensures full utilization of your compute resources and minimizes total processing time.
+
+You can choose:
+- **Multiple Continuous Runs**  
+  (e.g., 3 instances, each processing 5 partitions at once).
+- **Multiple Batch Runs**  
+  (e.g., 3 independent batch pipelines, each handling separate partitions one-by-one).
+
+Each instance should be assigned a **different partition range** to avoid overlapping computation.
+
+---
+
+### Example (3 Parallel Instances):
+
+```bash
+# Instance 1: partitions 0–4
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 4 15
+
+# Instance 2: partitions 5–9
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 5 9 15
+
+# Instance 3: partitions 10–14
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 10 14 15
+```
 
 ## Citation
 
