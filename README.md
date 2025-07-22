@@ -28,7 +28,7 @@ RaPID2 is part of an academic research project. While it has been extensively te
 - **Fail-Safe and Recovery**  
   If a specific partition fails (e.g., partition 0 of 10), you can recover by subdividing it further.
   
-  RaPID v2 uses modular partitioning based on the formula:
+  RaPID2 uses modular partitioning based on the formula:
 
   ```csharp
   KeyA % totalPartition == currentPartition
@@ -90,7 +90,7 @@ Open a terminal in the directory and run:
 
 #### Building on Windows with Visual Studio
 
-If you are using a Windows machine with Visual Studio installed, you can build RaPID v2 for most operating system (Windows, Linux, or macOS) using the .NET SDK's cross-platform capabilities. Visual Studio supports multi-target builds and publishing for different platforms.
+If you are using a Windows machine with Visual Studio installed, you can build RaPID2 for most operating system (Windows, Linux, or macOS) using the .NET SDK's cross-platform capabilities. Visual Studio supports multi-target builds and publishing for different platforms.
 
 For instructions on publishing to other operating systems, refer to the official Microsoft documentation:  
 https://learn.microsoft.com/en-us/dotnet/core/deploying/
@@ -106,7 +106,7 @@ After building, the compiled executable will be located at:
 
 ### Command-Line Parameters
 
-RaPID v2 requires the following positional arguments:
+RaPID2 requires the following positional arguments:
 
 | **Parameter** | **Type**       | **Description** |
 |---------------|----------------|-----------------|
