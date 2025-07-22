@@ -217,7 +217,7 @@ Each instance should be assigned a **different partition range** to avoid overla
 
 ---
 
-#### Example (3 Continuous Instances):
+#### Example 1: 3 Continuous Instances
 
 ```bash
 # Instance 1: partitions 0–4
@@ -230,7 +230,7 @@ RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 5 9 15
 RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 10 14 15
 ```
 
-####Example 2: 3 Parallel Batch Runs
+#### Example 2: 3 Parallel Batch Runs
 ```bash
 # Instance 1 (Batch Run for partitions 0–4):
 RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 0 15
