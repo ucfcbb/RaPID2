@@ -139,6 +139,33 @@ partition range 0 to 7 (inclusive),
 across a total of 8 partitions.
 
 
+## Memory Usage and Safe Test Run
+
+Memory requirements for RaPID v2 vary significantly depending on:
+- The IBD segment density of your dataset (which depends on the data panel).
+- The memory management behavior of your operating system and hardware.
+
+Because of this variability, we strongly recommend a **safe test run** before processing the full dataset.
+
+### Suggested Test Procedure
+
+1. Start with a higher number of partitions (e.g., 100).
+2. Run **only the first partition** (`partition 0 of 100`) as a test:
+
+```bash
+RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 4 F 3 0 0 100
+```
+3. Monitor your machine's memory usage during this run.
+
+4. Based on the observed memory consumption:
+
+   If memory usage is low: You can reduce the number of partitions for faster overall performance.
+
+   If memory usage is high or your machine struggles: Increase the number of partitions for safer, more memory-efficient execution.
+
+
+
+
 ## Citation
 
 If you use RaPID2 in your research, we would appreciate a citation.  
