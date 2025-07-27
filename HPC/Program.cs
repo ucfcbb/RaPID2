@@ -67,7 +67,7 @@ internal class Program
 
         VCF_Path = args[0];
         GMap_Path = args[1];
-        LLM_GLen = Convert.ToInt32(args[2]);
+        LLM_GLen = Convert.ToDouble(args[2]);
         Out_Path = args[3] + ".ibd";
         nWriter = Convert.ToInt32(args[4]);
 
