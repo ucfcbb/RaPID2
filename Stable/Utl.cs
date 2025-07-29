@@ -133,9 +133,7 @@ namespace RaPIDv2_Stable_1._0
 
             void RunOneInstance(int instanceID, bool append)
             {
-                //try
-                //{
-                //Console.WriteLine(DateTime.Now + " Buffer Writer " + instanceID);
+
                 StreamWriter sw = new StreamWriter(outPath + "." + instanceID + ".ibd", append);
                 sw.NewLine = "\n";
 
@@ -166,22 +164,7 @@ namespace RaPIDv2_Stable_1._0
                 sw.Close();
 
                 Console.WriteLine(DateTime.Now + " Buffer Writer " + instanceID + " Complete.");
-                //}
-                //catch (Exception ex)
-                //{
-                //    Console.WriteLine("Error In Writer");
-                //    StringBuilder sb = new StringBuilder();
-                //    while (ex != null)
-                //    {
-                //        sb.AppendLine($"Exception: {ex.GetType().Name}");
-                //        sb.AppendLine($"Message  : {ex.Message}");
-                //        sb.AppendLine($"StackTrace:\n{ex.StackTrace}");
-                //        ex = ex.InnerException;
-                //        if (ex != null) sb.AppendLine("Inner Exception:");
-                //    }
-                //    Console.WriteLine(sb.ToString());
-                //    System.Diagnostics.Process.GetCurrentProcess().Kill();
-                //}
+
 
             }
 
