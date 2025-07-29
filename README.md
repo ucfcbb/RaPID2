@@ -130,7 +130,7 @@ You can use it to run a quick test without needing a real dataset.
 Example (Stable Mode):
 
 ```bash
-RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 7 8
+RaPID_v2_Stable-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 7 8
 ```
 This runs RaPID v2 using:
 
