@@ -27,4 +27,4 @@ It is not meant to represent any biologically meaningful data or to be used for 
 ```bash
   RaPID_v2_HPC-1.0 dummy.vcf plink.chr20.GRCh38.map 3.0 test_output.ibd 2 F 3 0 0 1
 ```
-These commands will run a minimal partition (0 of 1) using 2 writers and a fixed window size of 3.
+These commands will run a minimal partition (0 of 1 in total) using 2 writers and a fixed window size of 3.
