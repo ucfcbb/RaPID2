@@ -136,7 +136,7 @@ This runs RaPID v2 using:
 
 a 3.0 cM threshold,
 
-4 output writers,
+1 output writers,
 
 fixed-window projection (F) with window size 3,
 
