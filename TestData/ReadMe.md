@@ -16,6 +16,7 @@ It is not meant to represent any biologically meaningful data or to be used for 
 ### Usage
 
 1. **Unzip the VCF file**:
+   You can use the following command or any other method of unzipping `.gz` files:
    ```bash
    gunzip dummy.vcf.gz
    ```
