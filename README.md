@@ -123,8 +123,6 @@ RaPID2 requires the following positional arguments:
 
 ### Examples and Toy Case
 
-Below are some example commands for running RaPID v2. These demonstrate how to configure partitioning, writers, and window strategies in both Stable and HPC modes.
-
 A minimal **toy dataset** is included in the [`TestData/`](./TestData) directory.  
 It is intended solely for verifying that RaPID v2 is installed and functioning properly.  
 You can use it to run a quick test without needing a real dataset.
