@@ -11,8 +11,6 @@ It is not meant to represent any biologically meaningful data or to be used for 
 - `plink.chr20.GRCh38.map`  
   A PLINK-format genetic map file for chromosome 20 (GRCh38), used here only to satisfy input requirements.
 
-> ⚠️ These files are included for functional testing purposes only and do not carry any research or biological significance.
-
 ---
 
 ### Usage
