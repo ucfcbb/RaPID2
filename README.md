@@ -129,7 +129,7 @@ A minimal **toy dataset** is included in the [`TestData/`](./TestData) directory
 It is intended solely for verifying that RaPID v2 is installed and functioning properly.  
 You can use it to run a quick test without needing a real dataset.
 
-#### Example
+Example (Stable Mode):
 
 ```bash
 RaPID_v2_HPC-1.0 my.vcf my.gmap 3.0 output.ibd 1 F 3 0 7 8
