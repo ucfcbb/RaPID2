@@ -265,9 +265,13 @@ Choose continuous or batch mode based on your system’s memory behavior and ope
 
 ## Citation
 
-If you use RaPID2 in your research, we would appreciate a citation.  
-The associated paper is currently in preparation and the link will be provided here once available.
+If you use RaPID2 in your research, we would appreciate a citation. 
 
+Tang, K., et al. RaPID2: A Parallel Scalable Framework for Identity-by-Descent Segment Detection via Parallel PBWT.
+
+Bioinformatics Advances, Accepted for publication (2026).
+
+The DOI and publication link will be updated here upon official release.
 
 ## References
 
