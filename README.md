@@ -267,12 +267,27 @@ Choose continuous or batch mode based on your system’s memory behavior and ope
 
 If you use RaPID2 in your research, we would appreciate a citation. 
 
-Tang, K., et al. "RaPID2: A Parallel Scalable Framework for Identity-by-Descent Segment Detection via Parallel PBWT".
+Tang, K., Naseri, A., Zhi, D., Zhang, S. 
 
-Bioinformatics Advances, Accepted for publication (2026).
+RaPID2: a parallel scalable framework for identity-by-descent segment detection via parallel PBWT. 
 
-The DOI and publication link will be updated here upon official release.
+Bioinformatics Advances, Volume 6, Issue 1, 2026, vbag078. 
 
+https://doi.org/10.1093/bioadv/vbag078
+
+BibTeX:
+```
+@article{rapid2,
+  author  = {Tang, Kecong and Naseri, Ardalan and Zhi, Degui and Zhang, Shaojie},
+  title   = {RaPID2: a parallel scalable framework for identity-by-descent segment detection via parallel PBWT},
+  journal = {Bioinformatics Advances},
+  volume  = {6},
+  number  = {1},
+  year    = {2026},
+  pages   = {vbag078},
+  doi     = {10.1093/bioadv/vbag078}
+}
+```
 ## References
 
 [1] RaPID: Naseri, Ardalan, et al. "RaPID: ultra-fast, powerful, and accurate detection of segments identical by descent (IBD) in biobank-scale cohorts." Genome biology 20 (2019): 1-15. 
